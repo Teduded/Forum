@@ -27,6 +27,7 @@ if (!isset($_SESSION["user_id"])) {
     </h2>
 
     <p>Du är inloggad.</p>
+    <p><a href="logout.php">Logga ut</a></p>
 
 </body>
 </html>
