@@ -1,11 +1,13 @@
+
 <?php
 
 $host = "localhost";
-$dbname = "farforum";
+$dbname = "forum";
 $username = "root";
 $password = "";
 
 try {
+
     $pdo = new PDO(
         "mysql:host=$host;dbname=$dbname;charset=utf8mb4",
         $username,
@@ -23,5 +25,9 @@ try {
     );
 
 } catch (PDOException $e) {
-    die("Kunde inte ansluta till databasen.");
+
+    die("Kunde inte ansluta till databasen: " . $e->getMessage());
+
 }
+
+?>
