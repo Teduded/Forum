@@ -66,6 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Registrera konto</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>

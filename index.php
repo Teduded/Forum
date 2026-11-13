@@ -28,11 +28,20 @@ $topics = $stmt->fetchAll();
 <head>
     <meta charset="UTF-8">
     <title>Forum för fårskallar</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <h1>Forum för fårskallar</h1>
+    <div class="top-bar">
+
+        <h1>Forum för fårskallar</h1>
+
+        <a href="logout.php" class="nav-button logout-button">
+            Logga ut
+        </a>
+
+    </div>
 
     <h2>
         Välkommen, <?= htmlspecialchars($_SESSION["name"]) ?>!
@@ -40,7 +49,15 @@ $topics = $stmt->fetchAll();
 
     <p>Du är inloggad.</p>
 
-    <p><a href="create_topic.php">Skapa nytt ämne</a></p>
+    <div class="navigation">
+
+        <a href="create_topic.php" class="nav-button">
+            + Skapa nytt ämne
+        </a>
+
+    </div>
+
+    <hr>
 
     <h2>Diskussionsämnen</h2>
 
@@ -48,7 +65,7 @@ $topics = $stmt->fetchAll();
 
         <?php foreach ($topics as $topic): ?>
 
-            <div>
+            <div class="topic">
 
                 <h3>
                     <a href="topic.php?id=<?= $topic["id"] ?>">
@@ -61,11 +78,9 @@ $topics = $stmt->fetchAll();
                     <?= htmlspecialchars($topic["name"]) ?>
                 </p>
 
-                <p>
+                <p class="post-info">
                     <?= htmlspecialchars($topic["created_at"]) ?>
                 </p>
-
-                <hr>
 
             </div>
 
@@ -76,8 +91,6 @@ $topics = $stmt->fetchAll();
         <p>Det finns inga ämnen ännu. Skapa det första!</p>
 
     <?php endif; ?>
-
-    <p><a href="logout.php">Logga ut</a></p>
 
 </body>
 </html>

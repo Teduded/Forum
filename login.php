@@ -50,6 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Logga in</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
