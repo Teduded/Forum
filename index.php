@@ -44,7 +44,7 @@ $topics = $stmt->fetchAll();
     </div>
 
     <h2>
-        Välkommen, <?= htmlspecialchars($_SESSION["name"]) ?>!
+        Välkommen, <?= htmlspecialchars($_SESSION["username"]) ?>!
     </h2>
 
     <p>Du är inloggad.</p>

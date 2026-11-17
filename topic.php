@@ -18,7 +18,7 @@ if (!$topic_id) {
 
 // Hämta ämnet
 $stmt = $pdo->prepare(
-    "SELECT topics.id, topics.title, users.name
+    "SELECT topics.id, topics.title, users.username
      FROM topics
      JOIN users ON topics.user_id = users.id
      WHERE topics.id = ?"
@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 // Hämta alla inlägg
 $stmt = $pdo->prepare(
-    "SELECT posts.content, posts.created_at, users.name
+    "SELECT posts.content, posts.created_at, users.username
      FROM posts
      JOIN users ON posts.user_id = users.id
      WHERE posts.topic_id = ?
@@ -96,7 +96,7 @@ $posts = $stmt->fetchAll();
 
     <p>
         Skapat av:
-        <?= htmlspecialchars($topic["name"]) ?>
+        <?= htmlspecialchars($topic["username"]) ?>
     </p>
 
     <hr>
@@ -144,7 +144,7 @@ $posts = $stmt->fetchAll();
 
                 <p class="post-info">
                     Skrivet av:
-                    <strong><?= htmlspecialchars($post["name"]) ?></strong>
+                    <strong><?= htmlspecialchars($post["username"]) ?></strong>
                 </p>
 
                 <p class="post-info">
