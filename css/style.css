@@ -1,0 +1,56 @@
+
+body {
+    background-color: #ffffff;
+    color: #333;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1, h2, h3 {
+    color: #315b83;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post, .topic, .write-box {
+    background-color: white;
+    border: 1px solid #cbdbea;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 4px;
+}
+
+a {
+    color: #356fa5;
+}
+
+button, .nav-button {
+    display: inline-block;
+    background-color: #dceaf6;
+    color: #315b83;
+    border: 1px solid #b9cddd;
+    padding: 7px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input, textarea {
+    border: 1px solid #b9cddd;
+    padding: 7px;
+    font-family: Arial, sans-serif;
+}
+
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #d5e1ed;
+}

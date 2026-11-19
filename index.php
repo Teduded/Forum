@@ -12,7 +12,7 @@ if (!isset($_SESSION["user_id"])) {
 
 // Hämta alla ämnen och deras skapare
 $stmt = $pdo->query(
-    "SELECT topics.id, topics.title, topics.created_at, users.name
+    "SELECT topics.id, topics.title, topics.created_at, users.username
      FROM topics
      JOIN users ON topics.user_id = users.id
      ORDER BY topics.created_at DESC"
@@ -75,7 +75,7 @@ $topics = $stmt->fetchAll();
 
                 <p>
                     Skapat av:
-                    <?= htmlspecialchars($topic["name"]) ?>
+                    <?= htmlspecialchars($topic["username"]) ?>
                 </p>
 
                 <p class="post-info">
