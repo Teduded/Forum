@@ -77,5 +77,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 </form>
 
+<p>
+    Har du inget konto?
+    <a href="register.php">Registrera dig här</a>
+</p>
+
 </body>
 </html>
